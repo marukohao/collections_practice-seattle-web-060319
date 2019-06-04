@@ -48,14 +48,24 @@ def sum_array(array)
   sum
 end
 
+# def add_s(array)
+#   new_array = []
+#   array.each_with_index do |word, i|
+#     if i != 1 
+#       new_array << word + "s"
+#     else
+#       new_array << word
+#     end
+#   end
+#   new_array
+# end
+
 def add_s(array)
-  new_array = []
-  array.each_with_index do |word, i|
-    if i != 1 
-      new_array << word + "s"
+  array.each_with_index.collect do |word, index|
+    if index != 1 
+      word + "s"
     else
-      new_array << word
+      word
     end
   end
-  new_array
 end
